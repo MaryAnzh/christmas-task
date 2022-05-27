@@ -1,0 +1,140 @@
+.game {
+    display: flex;
+    width: 760px;
+    height: 770px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.fa-snowflake {
+	position: absolute;
+	top: -20px;
+    background-image: url(./../../assets/svg/snowflake-2.svg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+	z-index: 99;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+       
+	}
+}
+
+@keyframes rotate {
+   to {transform: rotate3d(0, 1, 0, 360deg);
+	}
+}
+
+.tree-wrap {
+   width: 100%;
+   height: 100%;
+    transition: .4s;
+    position: absolute;
+    z-index: -1;
+}
+
+.fir-tree-img {
+    margin-top: 30px;
+    position: absolute;
+    z-index: 3;    
+}
+
+.garland-tree-mask {
+    width: 500px;
+    height: 740px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 4;
+    mask-image: url(./../../assets/img/tree/1.png);
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url(./../../assets/img/tree/1.svg);
+    -webkit-mask-position: center;
+    -webkit-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    pointer-events: none
+}
+
+.garland-tree-wrap {
+  width: 500px;
+  height: 700px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.fairy-light-line {
+    margin-top: 0px;
+position: absolute;
+}
+
+.fairy-light-in-garland {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes fairy-white {
+     from { background: radial-gradient(circle closest-side at 50% 50%, #fff, rgba(0, 0, 0, 0));}
+     to {background: radial-gradient(circle closest-side at 50% 50%, #fff 40%, rgba(0, 0, 0, 0));}
+}
+
+@keyframes fairy-yellow {
+     from { background: radial-gradient(circle closest-side at 50% 50%, yellow, rgba(0, 0, 0, 0));}
+     to {background: radial-gradient(circle closest-side at 50% 50%, yellow 40%, rgba(0, 0, 0, 0) 120%);}
+}
+
+@keyframes fairy-red {
+     from { background: radial-gradient(circle closest-side at 50% 50%, red, rgba(0, 0, 0, 0));}
+     to {background: radial-gradient(circle closest-side at 50% 50%, rgb(241, 128, 128) 40%, rgba(0, 0, 0, 0) 120%);}
+}
+
+@keyframes fairy-blue {
+     from { background: radial-gradient(circle closest-side at 50% 50%, rgb(185, 185, 250), rgb(3, 0, 0, 0));}
+     to {background: radial-gradient(circle closest-side at 50% 50%, rgb(185, 185, 250) 40%, rgba(0, 0, 0, 0) 120%);}
+}
+
+@keyframes fairy-green {
+     from { background: radial-gradient(circle closest-side at 50% 50%, #ABFF00, rgba(0, 0, 0, 0));}
+     to {background: radial-gradient(circle closest-side at 50% 50%, #ABFF00 40%, rgba(0, 0, 0, 0) 120%);}
+}
+
+map {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.firtree-toy-img {
+    width: 60px;
+    height: 60px;
+    top: 95px;
+    left: 215px;
+    position: absolute;
+    z-index: 5;
+}
+
+/* map {
+    width: 500px;
+    height: 740px;
+} */
+
+ area {
+    cursor: pointer;
+   width: 140%;
+  }

@@ -1,0 +1,69 @@
+.hidden-toy-set {
+    position: absolute;
+    width: 680px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 3px solid #278D9F;
+    gap: 6px;
+    border-radius: 10px;
+    background: url(./../../assets/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+    z-index: 100;
+    margin-top: -170vh;
+    transition: .3s;
+}
+
+.last-toy-item {
+    width: 48.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-hover-js {
+    position: absolute;
+    font-size: 10px;
+
+margin-top: 35px;
+pointer-events: none;
+}
+
+.hidden-toy-set-buttpn {
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: 1px solid #278D9F;
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    transition: .5s;
+}
+
+.last-toy-item button:nth-child(1) {
+width: 50%;
+}
+
+.last-toy-item button:nth-child(2) {
+width: 42%;
+}
+
+.hidden-toy-set-buttpn:hover {
+    background-color: rgba(31, 112, 127, .7);
+    transition: .5s;
+}
+
+.hidden-toy-set-buttpn:active {
+    background-color: rgba(31, 112, 127, 1);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .3s;
+}

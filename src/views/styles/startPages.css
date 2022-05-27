@@ -1,0 +1,122 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+.main-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ball1 {
+    width: 500px;
+    height: 500px;
+    left: calc(50% - 550px);
+    top: 150px;
+    background-image: url(../../assets/img/ball/1.png);
+}
+
+.ball2 {
+    width: 240px;
+    height: 300px;
+    left: calc(50% + 150px);
+    top: 150px;
+    background-image: url(../../assets/img/ball/2.png);
+}
+
+.ball {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: upBall .5s;
+}
+
+.ball1::before {
+    top: -210px;
+    left: calc(50% - 47px);
+    width: 4px;
+    height: 220px;
+    width: 5px;
+}
+
+.ball2::before {
+    top: -205px;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 210px;
+    width: 5px;
+}
+
+.ball::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+}
+
+@keyframes upBall {
+    from {margin-top: -100vh;}
+    to {margin-top: 0;}
+}
+
+.start-page-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 600px;
+    height: 250px;
+    margin-bottom: 80px;
+    margin-top: 220px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    border: 3px solid #278D9F;
+    border-radius: 25px;
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    font-size: 48px;
+    animation: un-hidden .5s;
+}
+
+@keyframes un-hidden {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.start-page-title span {
+    width: 100%;
+}
+
+.switch-start-page {
+    position: relative;
+    width: 320px;
+    height: 60px;
+    border: 3px solid #278D9F;
+    border-radius: 30px;
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    font-weight: 300;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+    overflow: hidden;
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    animation: un-hidden .5s;
+}
+
+.switch-start-page:hover {
+    backdrop-filter: blur(0px);
+    background-color: rgba(31, 112, 127, .8);
+    outline-color: rgba(255, 255, 255, 1);
+}
+
+.switch-start-page:active {
+    background-color: white;
+}
